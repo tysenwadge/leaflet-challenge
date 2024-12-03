@@ -1,69 +1,38 @@
 # leaflet-challenge
 Module 15 Challenge 
-Congratulations on your new job! As the new lead analyst for the New York Citi BikeLinks to an external site. program, you are now responsible for overseeing the largest bike-sharing program in the United States. In your new role, you will be expected to generate regular reports for city officials looking to publicize and improve the city program.
+Background
+The United States Geological Survey, or USGS for short, is responsible for providing scientific data about natural hazards, the health of our ecosystems and environment, and the impacts of climate and land-use change. Their scientists develop new methods and tools to supply timely, relevant, and useful information about the Earth and its processes.
 
-Since 2013, the Citi Bike program has implemented a robust infrastructure for collecting data on the program's utilization. Each month, bike data is collected, organized, and made public on the Citi Bike DataLinks to an external site. webpage.
-
-However, while the data has been regularly updated, the team has yet to implement a dashboard or sophisticated reporting process. City officials have questions about the program, so your first task on the job is to build a set of data reports to provide the answers.
+The USGS is interested in building a new set of tools that will allow them to visualize their earthquake data. They collect a massive amount of data from all over the world each day, but they lack a meaningful way of displaying it. In this challenge, you have been tasked with developing a way to visualize USGS data that will allow them to better educate the public and other government organizations (and hopefully secure more funding) on issues facing our planet.
 
 Instructions
-Your task in this assignment is to aggregate the data found in the Citi Bike Trip History Logs and find two unexpected phenomena.
+The instructions for this activity are broken into two parts:
 
-Design 2–5 visualizations for each discovered phenomenon (4–10 total). You may work with a timespan of your choosing. Optionally, you can also merge multiple datasets from different periods.
+Part 1: Create the Earthquake Visualization
 
-The following are questions you may wish to answer. Do not limit yourself to these questions; they are suggestions for a starting point. Be creative!
+Part 2: Gather and Plot More Data (Optional with no extra points earning)
 
-How many trips have been recorded in total during the chosen period?
+Part 1: Create the Earthquake Visualization
+Your first task is to visualize an earthquake dataset. Complete the following steps:
 
-By what percentage has total ridership grown?
+Get your dataset. To do so, follow these steps:
 
-How have the proportions of short-term customers and annual subscribers changed?
+The USGS provides earthquake data in a number of different formats, updated every 5 minutes. Visit the USGS GeoJSON FeedLinks to an external site. page and choose a dataset to visualize. The following image is an example screenshot of what appears when you visit this link:
 
-What are the peak hours when bikes are used during the summer months?
+When you click a dataset (such as "All Earthquakes from the Past 7 Days"), you will be given a JSON representation of that data. Use the URL of this JSON to pull in the data for the visualization. The following image is a sampling of earthquake data in JSON format:
 
-What are the peak hours when bikes are used during the winter months?
+Import and visualize the data by doing the following:
 
-Today, what are the top 10 stations in the city for starting a journey? Based on data, why do you hypothesize these are the top locations?
+Using Leaflet, create a map that plots all the earthquakes from your dataset based on their longitude and latitude.
 
-Today, what are the top 10 stations in the city for ending a journey? Based on data, why?
+Your data markers should reflect the magnitude of the earthquake by their size and the depth of the earthquake by color. Earthquakes with higher magnitudes should appear larger, and earthquakes with greater depth should appear darker in color.
 
-Today, what are the bottom 10 stations in the city for starting a journey? Based on data, why?
+Hint: The depth of the earth can be found as the third coordinate for each earthquake.
 
-Today, what are the bottom 10 stations in the city for ending a journey? Based on data, why?
+Include popups that provide additional information about the earthquake when its associated marker is clicked.
 
-How does the average trip duration change by the type of user? (This may be under "User Type" or "member_casual" depending on the period the data is from).
+Create a legend that will provide context for your map data.
 
-What is the average distance in miles for a bike trip?
+Your visualization should look something like the preceding map.
 
-Which bikes (by ID) are most likely due for repair or inspection in the timespan?
-
-How variable is the utilization by bike ID?
-
-Use your visualizations (not necessarily all of them) to design a dashboard for each phenomenon. The dashboards should be accompanied by an analysis explaining why the phenomenon may be occurring.
-
-Create one of the following visualizations for city officials:
-
-Basic: A static map that plots all bike stations with a visual indication of the most popular locations to start and end a journey, with zip code data overlaid on top.
-
-Advanced: A dynamic map that shows how each station's popularity changes over time (by month and year). Again, with zip code data overlaid on the map.
-
-The map you choose should also be accompanied by a write-up describing any trends that were noticed during your analysis.
-
-Create your final presentation:
-
-Create a Tableau story that brings together the visualizations, requested maps, and dashboards.
-
-Ensure your presentation is professional, logical, and visually appealing.
-
-Considerations
-Remember, the people reading your analysis will NOT be data analysts. Your audience will be city officials, public administrators, and heads of New York City municipal departments. Your data and analysis need to be presented in a way that is focused, concise, easy to understand, and visually compelling. Your visualizations should be colorful enough to be included in press releases, and your analysis should be thoughtful enough to inform programmatic changes.
-
-Assessment
-Your final product will be assessed on the following metrics:
-
-Analytic Rigor
-
-Readability
-
-Visual Appeal
 
